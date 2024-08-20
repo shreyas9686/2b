@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display:flex ;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0% 5vh;
+            padding: 0 10%;
+            overflow-x:hidden ;
+
+        }
+        .scrollable-text{
+            position: absolute;
+            white-space: nowrap;
+            animation: scrollText 10s linear infinite;
+        }
+        .blinking-text{
+            animation: blinkText 0.5s alternate infinite;
+        }
+        @keyframes scrollText{
+0%{
+            transform:translateX(100%);
+        }
+        100%{
+            transform:translateX(-100);
+        }
+        } 
+        @keyframes blinkText{
+            0%,100%{
+                opacity: 1;
+            }
+            50%{
+                opacity:0;
+            }
+        }
+    
+    </style>
+</head>
+<div class="scrollable-text">
+    <p>This is a scollable txt that scrolls from left to right
+<br>
+<br>
+<br>
+
+    </p>
+</div>
+    <div class="blinking-text">
+        <p>This is a linking ext that blinks at regular interval</p>
+    </div>
+</body>
+</html>
